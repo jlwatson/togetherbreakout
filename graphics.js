@@ -14,8 +14,6 @@ var BALL_SPEED = 0.25;
 var BALL_DIE_SCORE = -1;
 var BLOCK_HIT_SCORE = 1;
 
-
-
 Crafty.c('Ball', {
 	replicate : function() {
 		TogetherJS.send({
@@ -38,9 +36,6 @@ Crafty.c('Ball', {
 	
 	this.onHit('Paddle', function(objects) {
 		this.vely = -this.vely;
-		//if(objects[0].obj.num == 0) {
-		//	this.replicate();
-		//}
 	});
 	
 	this.onHit('Block', function(objects) {
